@@ -1,0 +1,10 @@
+const fs=require("fs");
+const filename="test.txt";
+fs.writeFileSync(filename,"Hello Node.js");
+console.log("File created");
+const data=fs.readFileSync(filename,"utf8");
+console.log("Reading file:",data);
+fs.appendFileSync(filename,"\nLearning Fs module");
+console.log("File updated");
+fs.unlinkSync(filename);
+console.log("File deleted");
